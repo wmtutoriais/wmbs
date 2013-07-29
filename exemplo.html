@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html lang="pt_BR">
+<head>
+	<meta charset = "utf-8" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="wmbs/jquery-wmbs-1.0.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+
+	<script type="text/javascript" src="wmbs/jquery-wmbs-min-1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#wmbs_wrap').wmbs({
+				'active_thumb': 'wmbs_thumb_active', // class thumb active 
+				'thumb_drag'  : true, // if is draggable
+				'auto' : true, // if is automatique
+				'auto_time' : 2000, // speed transition
+				'pause_hover': true, // if pause in hover
+				'has_info' : true,
+				'info_style': {
+					'position':'absolute',
+                    'bottom':'0px',
+                    'width':'100%',
+                    'display':'block',
+                    'z-index':'12',
+                    'background':'#ccc',
+                    'color':'#333',
+                    'padding':'5px 0px',
+                    'text-align':'center'
+				},
+				'pagination': { // class next prev elements
+					'next':'wmbs_right',
+					'prev':'wmbs_left'
+				},
+				'pagination_thumb': { //class next prev elements thumb
+					'next':'wmbs_right_thumb',
+					'prev':'wmbs_left_thumb'
+				},
+				'screen_size'      : { // dimensions screen
+					'w':900, // iint pixel
+					'h':400 // int pixel
+				},
+				'box_thumb_size'   : { // dimensions thumb
+					'w':7, // int quant thumb
+					'h':62 // int pixel
+				}
+			});
+		});
+	</script>
+
+	<!--[if lt IE 9]>
+	     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<title>WM Banner Slider</title>
+</head>
+
+<body>
+	<header class='head' style='margin-bottom:30px;' >
+		<h1>WM Banner Slider</h1>
+	</header><!-- header.head -->
+
+	<section class='main' >
+
+		<div id='wmbs_wrap'>
+
+			<div class='wmbs_screen'>
+				<div class='wmbs_load'></div>
+			</div>
+
+			<div class='wmbs_thumb'>
+				<ul>
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w1.jpg' title=''>
+							<img src='uploads/b1.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 1 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w2.jpg' title=''>
+							<img src='uploads/b2.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 2 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w3.jpg' title=''>
+							<img src='uploads/b3.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 3 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w4.jpg' title=''>
+							<img src='uploads/b4.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 4 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w5.jpg' title=''>
+							<img src='uploads/b5.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 5 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w6.jpg' title=''>
+							<img src='uploads/b6.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 6 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w7.jpg' title=''>
+							<img src='uploads/b7.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 7 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w8.jpg' title=''>
+							<img src='uploads/b8.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 8 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w9.jpg' title=''>
+							<img src='uploads/b9.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 9 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w10.jpg' title=''>
+							<img src='uploads/b10.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 10 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w11.jpg' title=''>
+							<img src='uploads/b11.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 11 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w12.jpg' title=''>
+							<img src='uploads/b12.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 12 </strong>
+						</span>
+					</li>
+
+					<li class='wmbs_thumb_item'>
+						<a href='uploads/w13.jpg' title=''>
+							<img src='uploads/b13.jpg' alt='' />
+						</a>
+						<span class='wmbs_in_1 wmbs_hide'>
+							Descrição <strong> 13 </strong>
+						</span>
+					</li>
+				</ul>
+			</div><!-- div.wmbs_itens -->
+
+			<div class='wmbs_pag wmbs_left' ></div>
+			<div class='wmbs_pag wmbs_right' ></div>
+			<div class='wmbs_pag_thumb wmbs_left_thumb' ></div>
+			<div class='wmbs_pag_thumb wmbs_right_thumb' ></div>
+
+		</div><!-- div#wmbs_wrap -->
+
+		<div style='padding-top:30px;' >
+			<a href='index.php' title='Ver documentação'>Ver documentação</a>
+		</div>
+
+	</section><!-- section.main -->
+
+	<footer class='foot' style='margin-top:50px;' >
+		<p>
+			Desenvolvido por <strong>Welison Menezes</strong> || Contato: <em>welisonmenezes@gmail.com</em>
+		</p>
+	</footer><!-- footer.foot -->
+</body>
+</html>

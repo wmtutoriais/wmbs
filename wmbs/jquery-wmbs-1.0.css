@@ -1,0 +1,89 @@
+.wmbs_hide{
+	display: none;
+}
+
+/*
+ * SCREEN
+ */
+div#wmbs_wrap{
+	background: #000;
+	padding: 5px 0px;
+	width: 910px;
+}
+div.wmbs_screen{
+	background: #f4f4f4;
+	margin-bottom: 5px !important;
+}
+div.wmbs_screen div.wmbs_load{
+	background: url(wmbs-img/loader.gif) no-repeat;
+	height: 32px;
+	width: 32px;
+}
+
+/*
+ * THUMBNAILS
+ */
+div.wmbs_thumb{
+	cursor: pointer;
+	width: 900px;
+}
+div.wmbs_thumb img{
+	border: solid 1px #000;
+	height: 60px;
+	margin: 0px 5px 0px 0px;
+	width: 100px;
+}
+div.wmbs_thumb li.wmbs_thumb_active img{
+	border: solid 1px #fff;
+}
+
+/*
+ * PAGINATION 
+ */
+div.wmbs_pag{
+	background: url(wmbs-img/wmbs_arrow.png) no-repeat;
+	cursor: pointer;
+	height: 35px;
+	position: absolute;
+	top: 188px;
+	width: 30px;
+	z-index: 11;
+}
+div.wmbs_pag.wmbs_left{
+	background-position: 0px -75px;
+	left: 15px;
+}
+div.wmbs_pag.wmbs_left:hover{
+	background-position: 0px -112px;
+}
+div.wmbs_pag.wmbs_right{
+	background-position: 0px 0px;
+	right: 15px;
+}
+div.wmbs_pag.wmbs_right:hover{
+	background-position: 0px -37px;
+}
+/* pagination thumb */
+div.wmbs_pag_thumb{
+	background: url(wmbs-img/wmbs_arrows_thumb.gif) no-repeat;
+	cursor: pointer;
+	height: 62px;
+	position: absolute;
+	bottom: 5px;
+	width: 30px;
+	z-index: 11;
+}
+div.wmbs_pag_thumb.wmbs_left_thumb{
+	background-position: 0px -62px;
+	left: 5px;
+}
+div.wmbs_pag_thumb.wmbs_left_thumb:hover{
+	background-position: 0px -186px;
+}
+div.wmbs_pag_thumb.wmbs_right_thumb{
+	background-position: 0px 0px;
+	right: 5px;
+}
+div.wmbs_pag_thumb.wmbs_right_thumb:hover{
+	background-position: 0px -124px;
+}
