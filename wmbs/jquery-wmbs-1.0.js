@@ -18,16 +18,38 @@
     };
     var funcs = {
         init_wmbs: function(el, set){
+            var obj_thumb  = funcs.get_elements_thumb(el, set);
+            var screen_box   = el.children().eq(0);
+            var ul_thumb     =  el.children().eq(1).find('ul');
+            var lis_thumb    = ul_thumb.find('li');
+            var len          = lis_thumb.length;
+            var cont         = 1;
             var el  = el;
             var set = set;
+
             funcs.style_thumb(el, set);
             funcs.style_screen(el, set);
-            funcs.pagination(el, set);
-            funcs.pagination_thumb(el, set);
             if( set.thumb_drag === true ) funcs.drag_move_thumb(el, set);
-            funcs.get_by_link(el, set);
-            funcs.default_img(el, set);
-            funcs.temp_auto(el, set);
+            lis_thumb.find('a').each(function(){
+                var t   = $(this);
+                var src = t.attr('href');
+                t.click(function(){
+                    return false;
+                });
+                $('<img src="'+ src +'">').load(function() {
+                    cont ++;
+                    if(cont == len){
+                        funcs.get_by_link(el, set);
+                        funcs.pagination(el, set);
+                        funcs.pagination_thumb(el, set);
+                        funcs.default_img(el, set);
+                        funcs.temp_auto(el, set);
+                        t.click(function(){
+                            return true;
+                        });
+                    } 
+                });
+            });
         },
         default_img: function(el, set){
             // get elementes
@@ -196,12 +218,17 @@
                 }, set.auto_time);
                 // stop in hover
                 if( set.pause_hover === true ){
+                    var cont = 0;
                     el.hover(function(){
                         window.clearTimeout(t);
+                        cont = 1;
                     },function(){
-                        t = window.setInterval(function() {
-                            funcs.auto_thumb(el, set, true);
-                        }, set.auto_time);
+                        if( cont == 1 ){
+                            t = window.setInterval(function() {
+                                funcs.auto_thumb(el, set, true);
+                            }, set.auto_time);
+                            cont = 0;
+                        }
                     });
                 } 
             }
